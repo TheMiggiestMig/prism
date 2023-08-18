@@ -13,7 +13,7 @@ Your attempts to use OCR on screenshots of the file also fail (even hexdumps of 
 
 *So how do you get the file?*
 
-I went with converting the hex data into colored blocks :)
+I went with converting the file to an image :)
 
 By typing a relatively short script on the VM (`prism.ps1`), I could convert a relatively small file ( < 25KB compressed) into a series of colored blocks.
 After capturing the output via screenshots and cropping + stitching the batches of blocks together, I wrote a script (`prism.py`) to parse the image and convert it back into the original file.
@@ -23,7 +23,7 @@ Running the `prism.ps1` script on the target machine while specifying the file g
 
 ![How the output looks after running the powershell script](screenshot.png)
 
-The cropped screenshot can then be saved and used (`example.png' in this case)
+The cropped screenshot can then be saved and used (`example.png` in this case)
 
 ![The contents of example.png](example.png)
 
