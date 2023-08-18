@@ -100,10 +100,10 @@ def find_image_bounds(image):
 
     # Sample some border pixels to determine the background color.
     samples = {}
-    coords = [(0, 0), (image.width, 0), (0, image.height), (image.width, image.height)]
+    coords = [(0, 0), (image.width - 1, 0), (0, image.height - 1), (image.width - 1, image.height - 1)]
 
     for pt in coords:
-        pixel = image.getpixel((0,0))
+        pixel = image.getpixel(pt)
         samples[pixel] = samples[pixel] + 1 if pixel in samples.keys() else 1
     
     num_distinct = len(samples.keys())
